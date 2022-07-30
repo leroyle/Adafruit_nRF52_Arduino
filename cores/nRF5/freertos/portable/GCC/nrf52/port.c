@@ -67,7 +67,7 @@ void vPortStartFirstTask( void )
                     " mov r0, %0            \n"
                     " msr basepri, r0       \n"
 #endif
-                    " svc 0                 \n" /* System call to start first task. */
+                    " svc 3                 \n" /* System call to start first task. */
                     "                       \n"
                     " .align 2              \n"
 #ifdef SOFTDEVICE_PRESENT

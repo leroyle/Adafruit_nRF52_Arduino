@@ -9,10 +9,10 @@ MEMORY
       board in platforms/nordicnrf52/boards
   */
 
-  /* Nordic Softdevice Version 6.1.1 */
-  FLASH (rx)     : ORIGIN = 0x26000, LENGTH = 0xED000 - 0x26000
-  /* Nordic Softdevice Version 7.3.0 */
-  /* FLASH (rx)     : ORIGIN = 0x27000, LENGTH = 0xED000 - 0x27000 */
+   /* Nordic Softdevice Version 7.3.0 - 27000*/
+   FLASH (rx)     : ORIGIN = 0x27000, LENGTH = 0xED000 - 0x27000
+   /* Nordic Softdevice Version 6.1.1 - 26000*/
+   /* FLASH (rx)     : ORIGIN = 0x26000, LENGTH = 0xED000 - 0x26000  */
 
   /* SRAM required by Softdevice depend on
    * - Attribute Table Size (Number of Services and Characteristics)
