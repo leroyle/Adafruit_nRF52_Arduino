@@ -2,13 +2,19 @@
 
 30-July-2022
 This branch (leroyle) of the repo contains the files to support Seeed Xiao BLE with PlatformIO. It may work with
-Arduino IDE but is untested. 
-The PlatformIO platform repo at: https://github.com/leroyle/nordicnrf52/tree/Mysensors_Lora
-contains board definitions for the Seeed Xiao.
+Arduino IDE but is untested.  
+The Seeed Xiao board support definition, also required for this to work, is provided buy the repo branch at: https://github.com/leroyle/nordicnrf52/tree/Mysensors_Lora
 
-One should be able to let to PlatformIO tool install Adafruit_nRF52_Arduino and then overwrite the installed 
-platformio/packages/framework-arduinoadafruitnrf52 directory with this repo.
-One can build a simple empty demo targeting an already supported Adafruit BLE board.
+Because this updated code is not yet contained within the repository of PlatformIO frameworks one will need to down load the default framework package and platform files first, then overlay those with these updates.
+To do this:
+One should be able to create a sample project targeting, for example, board "Adafruit Nano 33 BLE" and framework "Arduino".
+- create the project, then build it.
+- - the project build should download the required code package/framework-arduinoadafruitnrf52 and platform/ nordicnrf52 files
+- let the project build process install the default files and then overwrite the newly installed 
+.platformio/packages/framework-arduinoadafruitnrf52 directory with this repo. 
+And overwrite .platformio/plaforms/nordicnrf52 with the on mentioned above.
+
+At this point you should be able to create/build a project targeting board "xiaoblesense and framework Arduino.
 
 [![Build Status](https://github.com/adafruit/Adafruit_nRF52_Arduino/workflows/Build/badge.svg)](https://github.com/adafruit/Adafruit_nRF52_Arduino/actions)
 
