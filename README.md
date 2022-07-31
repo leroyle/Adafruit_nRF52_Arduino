@@ -1,20 +1,25 @@
 # Arduino Core for Adafruit Bluefruit nRF52 Boards
 
-30-July-2022
+Fork Changes 30-July-2022
+### NOTE: A work in progress
 This branch (leroyle) of the repo contains the files to support Seeed Xiao BLE with PlatformIO. It may work with
 Arduino IDE but is untested.  
 The Seeed Xiao board support definition, also required for this to work, is provided buy the repo branch at: https://github.com/leroyle/nordicnrf52/tree/Mysensors_Lora
 
-Because this updated code is not yet contained within the repository of PlatformIO frameworks one will need to down load the default framework package and platform files first, then overlay those with these updates.
+Because this updated code is not yet contained within the repository of PlatformIO frameworks one will need to force a download the default PlatformIO package and platform files first, then overlay those with these updates.
+
 To do this:
-One should be able to create a sample project targeting, for example, board "Adafruit Nano 33 BLE" and framework "Arduino".
+One should be able to create a sample project targeting, for example, board type "Adafruit Feather NRF52840 Express" and framework "Arduino".
 - create the project, then build it.
-- - the project build should download the required code package/framework-arduinoadafruitnrf52 and platform/ nordicnrf52 files
+- - the project build should automatically download the required code in package/framework-arduinoadafruitnrf52 and platform/nordicnrf52 sub-directories.
 - let the project build process install the default files and then overwrite the newly installed 
 .platformio/packages/framework-arduinoadafruitnrf52 directory with this repo. 
-And overwrite .platformio/plaforms/nordicnrf52 with the on mentioned above.
+And overwrite .platformio/platforms/nordicnrf52 with the nordicnrf52 repo mentioned above.
 
-At this point you should be able to create/build a project targeting board "xiaoblesense and framework Arduino.
+At this point you should be able to create/build a project targeting board "Seeed XIAO BLE SENSE" and framework "Arduino".
+
+#### NOTE Even though files and tags are labled "xiao ble sense" the board support files are currently valid for common functionality that applies to both the "Sense" and basic versions of the Xiao. No attempt has been made to differentiate between the two versions.
+
 
 [![Build Status](https://github.com/adafruit/Adafruit_nRF52_Arduino/workflows/Build/badge.svg)](https://github.com/adafruit/Adafruit_nRF52_Arduino/actions)
 
