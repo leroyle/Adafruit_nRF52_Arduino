@@ -1,5 +1,15 @@
 # Arduino Core for Adafruit Bluefruit nRF52 Boards
 
+30-July-2022
+This branch (leroyle) of the repo contains the files to support Seeed Xiao BLE with PlatformIO. It may work with
+Arduino IDE but is untested. 
+The PlatformIO platform repo at: https://github.com/leroyle/nordicnrf52/tree/Mysensors_Lora
+contains board definitions for the Seeed Xiao.
+
+One should be able to let to PlatformIO tool install Adafruit_nRF52_Arduino and then overwrite the installed 
+platformio/packages/framework-arduinoadafruitnrf52 directory with this repo.
+One can build a simple empty demo targeting an already supported Adafruit BLE board.
+
 [![Build Status](https://github.com/adafruit/Adafruit_nRF52_Arduino/workflows/Build/badge.svg)](https://github.com/adafruit/Adafruit_nRF52_Arduino/actions)
 
 This repository contains the Arduino BSP for Adafruit Bluefruit nRF52 series:
